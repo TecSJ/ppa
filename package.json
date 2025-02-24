@@ -22,7 +22,8 @@
     "dev": "tsx watch src/api-gateway/server",
     "lint": "eslint --fix .",
     "start": "node dist/server.js",
-    "build": "tsc"
+    "build": "tsc",
+    "test": "jest" 
   },
   "dependencies": {
     "fastify": "^5.2.1"
