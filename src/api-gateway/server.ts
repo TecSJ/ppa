@@ -1,20 +1,35 @@
-// src/api-gateway/server.ts
-import fastify from 'fastify';
+import Fastify from 'fastify';
+import AutoLoad from '@fastify/autoload';
+import path from 'path';
+import dotenv from 'dotenv';
+import sequelize from '../models/config/database';
 
-const server = fastify();
+dotenv.config();
 
-server.get('/', async (request, reply) => {
-    return { message: 'Hola Mundo' };
-});
+export const createServer = async () => {
+  await sequelize.sync({ force: false, alter: false });
 
-export const startServer = async () => {
-    try {
-        await server.listen({ port: 3005 });
-        console.log('Server is running on http://localhost:3005');
-    } catch (err) {
-        server.log.error(err);
-        process.exit(1);
-    }
+  const fastify = Fastify({ logger: true });
+
+  fastify.register(AutoLoad, {
+    dir: path.join(__dirname, 'plugins'),
+  });
+
+  fastify.register(AutoLoad, {
+    dir: path.join(__dirname, 'routes'),
+    ignorePattern: /.*(schema).*/,
+    options: { prefix: '/api' },
+  });
+
+  return fastify;
 };
 
-export default server;
+if (require.main === module) {
+  createServer().then((fastify) => {
+    const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 3005;
+    fastify.listen({ port: PORT, host: '0.0.0.0' }).catch((err) => {
+      fastify.log.error(err);
+      process.exit(1);
+    });
+  });
+}

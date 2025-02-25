@@ -32,7 +32,7 @@ const ConocimientosSchema = {
 class Conocimiento extends Model {
   static associate(models: any) {
     this.belongsTo(models.Actividades, { foreignKey: 'idActividad', as: 'Actividad' });
-    this.belongsTo(models.Unidades, { foreignKey: 'idUnidad', as: 'Unidad' });
+    //this.belongsTo(models.Unidades, { foreignKey: 'idUnidad', as: 'Unidad' });
   }
 
   static config(sequelize: Sequelize) {

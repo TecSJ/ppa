@@ -16,7 +16,7 @@ const sequelize = new Sequelize({
   },
 });
 
-sequelize.sync({ force: false })
 setupModels(sequelize);
+sequelize.sync({ force: false })
 
 export default sequelize;

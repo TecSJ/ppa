@@ -4,6 +4,7 @@ import { Asignatura, AsignaturasSchema } from './Asignaturas';
 import { Competencia, CompetenciasSchema } from './Competencias';
 import { Conocimiento, ConocimientosSchema } from './Conocimientos';
 
+
 export function setupModels(sequelize: Sequelize): void {
     // Aquí se definen los modelos
     Actividad.init(ActividadesSchema, Actividad.config(sequelize));

@@ -1,22 +1,21 @@
-// tests/server.test.ts
-import server, { startServer } from '../src/api-gateway/server';
+import { createServer } from '../src/api-gateway/server';
+import request from 'supertest';
 
-describe('GET /', () => {
+describe('API Tests', () => {
+  let server: any;
+
   beforeAll(async () => {
-    await startServer();
+    server = await createServer();
+    await server.ready();
   });
 
-  afterAll(() => {
-    server.close();
+  afterAll(async () => {
+    await server.close();
   });
 
-  it('should return a message', async () => {
-    const response = await server.inject({
-      method: 'GET',
-      url: '/', 
-    });
-
-    expect(response.statusCode).toBe(200);
-    expect(response.json()).toEqual({ message: 'Hola Mundo' });
+  it('Debe responder en el endpoint GET /api/status con 200', async () => {
+    const response = await request(server.server).get('/api/status/ok');
+    expect(response.status).toBe(200);
+    expect(response.body).toHaveProperty('message');
   });
 });

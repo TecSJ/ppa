@@ -75,7 +75,7 @@ const AsignaturasSchema = {
 
 class Asignatura extends Model {
     static associate(models:any){
-        this.belongsTo(models.Modulos, { foreignKey: 'idModulos' ,as: 'Modulo' });
+        //this.belongsTo(models.Modulos, { foreignKey: 'idModulos' ,as: 'Modulo' });
     }
 
     static config(sequelize: Sequelize) {
