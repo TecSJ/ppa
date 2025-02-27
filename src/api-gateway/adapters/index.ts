@@ -1,0 +1,1 @@
+export { actividadHandlers } from './actividad/handlers'
