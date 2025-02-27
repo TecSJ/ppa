@@ -1,7 +1,7 @@
-
 import { actividadHandlers } from '../../adapters'
 import {
     createActividadSchema,
+    deleteActividadSchema,
 } from './schema'
 import { FastifyInstance, FastifyRequest, FastifyReply } from 'fastify';
 
@@ -24,6 +24,18 @@ function Router(fastify: FastifyInstance): void{
             },
         },
         actividadHandlers.createActividadHandler
+    );
+
+    fastify.delete(
+        '/delete/:idActividad',
+        {
+            preHandler: fastify.authenticate,
+            schema:{
+                ...deleteActividadSchema,
+                security: [{ BearerAuth: [] }]
+            },
+        },
+        actividadHandlers.deleteActividadHandler
     );
 
 }
