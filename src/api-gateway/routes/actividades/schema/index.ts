@@ -1,0 +1,1 @@
+export { createActividadSchema } from './create.actividad.schema'
