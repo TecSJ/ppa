@@ -2,6 +2,9 @@ import { actividadHandlers } from '../../adapters'
 import {
     createActividadSchema,
     deleteActividadSchema,
+    findAllActividadesSchema,
+    findOneActividadesSchema,
+    updateActividadesSchema
 } from './schema'
 import { FastifyInstance, FastifyRequest, FastifyReply } from 'fastify';
 
@@ -38,6 +41,41 @@ function Router(fastify: FastifyInstance): void{
         actividadHandlers.deleteActividadHandler
     );
 
+    fastify.get(
+        '/findAll',
+        {
+            preHandler: fastify.authenticate,
+            schema:{
+                ...findAllActividadesSchema,
+                security: [{ BearerAuth: [] }]
+            },
+        },
+        actividadHandlers.findAllActividadHandler
+    );
+
+    fastify.get(
+        '/findOne/:idActividad',
+        {
+            preHandler: fastify.authenticate,
+            schema:{
+                ...findOneActividadesSchema,
+                security: [{ BearerAuth: [] }]
+            },
+        },
+        actividadHandlers.findOneActividadHandler
+    );
+
+    fastify.patch(
+        '/update/:idActividad',
+        {
+            preHandler: fastify.authenticate,
+            schema:{
+                ...updateActividadesSchema,
+                security: [{ BearerAuth: [] }]
+            },
+        },
+        actividadHandlers.updateActividadHandler
+    );
 }
 
 
