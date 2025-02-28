@@ -11,7 +11,7 @@ Este proyecto es una API RESTful desarrollada con Fastify, Sequelize, TypeScript
 - ESLint: Herramientas de linting y formato de código para mantener el código limpio.
 
 > [!IMPORTANT]
-> Estructura del Proyecto
+> Estructura del proyecto
 ```plaintext
 |root
 |---.github/workFlows (En esta carpeta se encuentra el archivo que funciona para github actions)
@@ -55,7 +55,7 @@ Este proyecto es una API RESTful desarrollada con Fastify, Sequelize, TypeScript
 
 3- instalar dependencias
 ```bash
-  Yarn install
+  yarn install
 ``` 
 4- configurar variables de entorno
 ```env
@@ -69,7 +69,7 @@ Este proyecto es una API RESTful desarrollada con Fastify, Sequelize, TypeScript
 ```
 5- Arrancar el proyecto
 ```bash
-  Yarn dev
+  yarn dev
 ``` 
 
 ## Funcionamiento
@@ -77,7 +77,7 @@ Tras arrancar el proyecto es requerido entrar a la ruta http://Localhost:3005/pp
 una vez tengas el token, En la parte superior derecha de Swagger, encontrarás un botón 'Authorize'. sera necesario precionarlo y ingresar Bearer <Token>  (el token debe ir sin <>)
 
 > [!IMPORTANT]
-> Este proyecto usa Github Actios para validar el correcto funcionamiento
+> Este proyecto usa github actios para validar el correcto funcionamiento
 
 > [!WARNING]
-> Este proyecto contiene un Linter, por lo que se pide que no se borre algun error por este mismo
+> Este proyecto contiene un linter, por lo que se pide que no se borre algun error por este mismo

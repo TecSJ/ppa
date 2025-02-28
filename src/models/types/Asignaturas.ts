@@ -21,6 +21,7 @@ const AsignaturasSchema = {
     clave: {
         type: DataTypes.STRING,
         allowNull: false,
+        unique: true
     },
     nombre: {
         type: DataTypes.STRING,
