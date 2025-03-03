@@ -1,6 +1,9 @@
 import { FastifySchema } from 'fastify';
 import { asignatura } from './propeties/asignatura'
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const { estado, ...Asignatura } = asignatura;
+
 export const createAsignaturaSchema: FastifySchema = {
     tags: ['Asignaturas'],
     summary: 'Crear una Asignatura',
@@ -8,7 +11,7 @@ export const createAsignaturaSchema: FastifySchema = {
     body: {
         type: 'object',
         required: ['nombre'],
-        properties: asignatura,
+        properties: Asignatura,
     },
     response: {
         200: {

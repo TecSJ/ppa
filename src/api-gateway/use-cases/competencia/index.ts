@@ -1,0 +1,1 @@
+export { createCompetencia } from './create.competencia.use-case';

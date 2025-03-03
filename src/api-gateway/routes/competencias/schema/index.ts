@@ -1,0 +1,1 @@
+export { createCompetenciaSchema } from './create.competencia.schema';
