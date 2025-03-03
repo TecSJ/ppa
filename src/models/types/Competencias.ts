@@ -18,6 +18,11 @@ const CompetenciasSchema = {
     allowNull: false,
     defaultValue: 'Activo',
   },
+  clave:{
+    type: DataTypes.STRING,
+    allowNull: false,
+    unique: true,
+  },
 };
 
 class Competencia extends Model {

@@ -18,7 +18,7 @@ declare module 'fastify' {
 function Router(fastify: FastifyInstance): void{
 
     fastify.post(
-        '/create',
+        '/',
         {
             preHandler: fastify.authenticate,
             schema:{
@@ -30,7 +30,7 @@ function Router(fastify: FastifyInstance): void{
     );
 
     fastify.delete(
-        '/delete/:idActividad',
+        '/:idActividad',
         {
             preHandler: fastify.authenticate,
             schema:{
@@ -42,7 +42,7 @@ function Router(fastify: FastifyInstance): void{
     );
 
     fastify.get(
-        '/findAll',
+        '/fa',
         {
             preHandler: fastify.authenticate,
             schema:{
@@ -54,7 +54,7 @@ function Router(fastify: FastifyInstance): void{
     );
 
     fastify.get(
-        '/findOne/:idActividad',
+        '/fo/:idActividad',
         {
             preHandler: fastify.authenticate,
             schema:{
@@ -66,7 +66,7 @@ function Router(fastify: FastifyInstance): void{
     );
 
     fastify.patch(
-        '/update/:idActividad',
+        '/:idActividad',
         {
             preHandler: fastify.authenticate,
             schema:{
