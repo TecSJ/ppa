@@ -1,6 +1,6 @@
 import { Model, DataTypes, Sequelize } from 'sequelize';
 
-const PROGRAMAS_TABLE = 'Programas';
+const PROGRAMA_TABLE = 'Programas';
 
 const ProgramasSchema = {
     idPrograma: {
@@ -10,12 +10,12 @@ const ProgramasSchema = {
         autoIncrement: true,
     },
     clave: {
-        type: DataTypes.CHAR(5),
+        type: DataTypes.STRING,
         allowNull: false,
         defaultValue: 0,
     },
     codigo: {
-        type: DataTypes.CHAR(6),
+        type: DataTypes.STRING,
         allowNull: false,
         defaultValue: 0,
     },
@@ -46,7 +46,7 @@ const ProgramasSchema = {
         allowNull: true,
     },
     idPlantel: {
-        type: DataTypes.CHAR(2),
+        type: DataTypes.STRING,
         allowNull: false,
     },
     estado: {
@@ -60,10 +60,10 @@ class Programa extends Model {
     static config(sequelize: Sequelize){
         return {
             sequelize,
-            tableName: PROGRAMAS_TABLE,
+            tableName: PROGRAMA_TABLE,
             modelName: 'Programas'
         }
     }
 }
 
-export { PROGRAMAS_TABLE, ProgramasSchema, Programa } 
+export { PROGRAMA_TABLE, ProgramasSchema, Programa } 

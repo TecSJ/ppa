@@ -1,4 +1,5 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
+import { FindAllProgramaSchema } from 'validators/programa';
 import { handleError } from '../../../utils/error.handler';
 import { findAllProgramas } from 'api-gateway/use-cases/programa/findAll.programa.use-case';
 
@@ -7,6 +8,8 @@ export const findAllProgramasHandler = async (
     reply: FastifyReply
 ) => {
     try{
+        FindAllProgramaSchema.parse(request.query);
+        
         const programa = await findAllProgramas();
         
         if(!programa || programa.length === 0){
