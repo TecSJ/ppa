@@ -1,23 +1,23 @@
 import { z } from 'zod';
-export const CreateModeloSchema = z.object({
+export const CreateModuloSchema = z.object({
     idPlan: z.number().int().positive(),
     clave: z.string().min(1).max(15),
     nombre: z.string().min(1).max(100),
 });
 
-export const FindOneModeloSchema = z.object({
-  idModelo: z.number().int().positive({
-    message: 'idModelo debe ser un número entero positivo',
+export const FindOneModuloSchema = z.object({
+  idModulo: z.number().int().positive({
+    message: 'idModulo debe ser un número entero positivo',
   }),
 });
 
-export const UpdateModeloSchema = z.object({
-  idModelo: z.number().int().positive({
-    message: 'idModelo debe ser un número entero positivo',
+export const UpdateModuloSchema = z.object({
+  idModulo: z.number().int().positive({
+    message: 'idModulo debe ser un número entero positivo',
   }),
 });
 
-export const UpdateModeloBodySchema = z.object({
+export const UpdateModuloBodySchema = z.object({
     idPlan: z.number().int().positive().optional(),
     clave: z.string().min(1).max(255).optional(),
     abreviatura: z.string().min(1).max(255).optional(),
@@ -28,14 +28,14 @@ export const UpdateModeloBodySchema = z.object({
     estado: z.enum(['Elaborado', 'Validado', 'Autorizado', 'Publicado', 'Cancelado']).optional(),
 });
 
-export const DeleteModeloSchema = z.object({
-  idModelo: z.number().int().positive({ 
-    message: 'idModelo debe ser un número entero positivo',
+export const DeleteModuloSchema = z.object({
+  idModulo: z.number().int().positive({ 
+    message: 'idModulo debe ser un número entero positivo',
   }),
 });
 
-export const FindAllModeloSchema = z.object({
-    idModelo: z.number().int().positive().optional(),
+export const FindAllModuloSchema = z.object({
+    idModulo: z.number().int().positive().optional(),
     idPlan: z.number().int().positive().optional(),
     clave: z.string().min(1).max(255).optional(),
     abreviatura: z.string().min(1).max(255).optional(),
