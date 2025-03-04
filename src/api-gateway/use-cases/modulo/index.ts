@@ -1,3 +1,3 @@
-export { createActividad } from './create.actividad.use-case';
+export { createActividad } from './create.modulo.use-case';
 export {} from '.';
 export {} from '.';
