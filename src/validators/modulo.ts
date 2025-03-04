@@ -2,7 +2,11 @@ import { z } from 'zod';
 export const CreateModuloSchema = z.object({
     idPlan: z.number().int().positive(),
     clave: z.string().min(1).max(15),
+    abreviatura: z.string().min(1).max(30),
     nombre: z.string().min(1).max(100),
+    creditos: z.number().int().positive(),
+    asignaturas: z.number().int().positive(),
+    tipo: z.enum(['Base', 'Especialidad']),
 });
 
 export const FindOneModuloSchema = z.object({
