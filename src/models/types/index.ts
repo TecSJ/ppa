@@ -3,6 +3,7 @@ import { Actividad, ActividadesSchema } from './Actividades';
 import { Asignatura, AsignaturasSchema } from './Asignaturas';
 import { Competencia, CompetenciasSchema } from './Competencias';
 import { Conocimiento, ConocimientosSchema } from './Conocimientos';
+import { Programa, ProgramasSchema } from './Programas';
 
 
 export function setupModels(sequelize: Sequelize): void {
@@ -11,6 +12,7 @@ export function setupModels(sequelize: Sequelize): void {
     Asignatura.init(AsignaturasSchema, Asignatura.config(sequelize));
     Competencia.init(CompetenciasSchema, Competencia.config(sequelize));
     Conocimiento.init(ConocimientosSchema, Conocimiento.config(sequelize));
+    Programa.init(ProgramasSchema, Programa.config(sequelize));
     
     // Aquí se definen las relaciones
     Asignatura.associate(sequelize.models);
