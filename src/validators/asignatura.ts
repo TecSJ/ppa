@@ -1,5 +1,4 @@
 import { z } from 'zod';
-//direccion de administracion y finanzas
 export const CreateAsignaturaSchema = z.object({
     idModulo: z.number().int().positive(),
     clave: z.string().min(1).max(255),

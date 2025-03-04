@@ -1,5 +1,4 @@
 import { z } from 'zod';
-//direccion de administracion y finanzas
 export const CreateCompetenciaSchema = z.object({
     descripcion: z.string().min(1).max(255),
     estado: z.enum(['Activo', 'Inactivo'], { message: 'digital debe ser Activo, Inactivo' }),
