@@ -1,14 +1,14 @@
 import { Op } from 'sequelize';
 import { findAllQuery } from 'models/queries';
-import { Actividad } from 'models/types/Actividades';
+import { Modulo } from 'models/types/Modulos';
 
-type FindAllActividadsData = Partial<Actividad>;
+type FindAllModulosData = Partial<Modulo>;
 
-const findAllActividades = async (where?: FindAllActividadsData) => {
-  return await findAllQuery(Actividad)({
+const findAllModulos = async (where?: FindAllModulosData) => {
+  return await findAllQuery(Modulo)({
     estado: { [Op.ne]: 'Cancelado' }, // Estado no sea "Cancelado"
     ...where,
   });
 };
 
-export { findAllActividades };
+export { findAllModulos };
