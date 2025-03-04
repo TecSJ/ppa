@@ -63,7 +63,7 @@ class Modulo extends Model {
         sequelize,
         tableName: MODULO_TABLE,
         modelName: 'Modulos',
-        idnexes: 
+        indexes: 
             [
                 {
                     unique: true,
