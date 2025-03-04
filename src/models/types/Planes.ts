@@ -68,7 +68,6 @@ class Planes extends Model {
             sequelize,
             tableName: PLANES_TABLE,
             modelName: 'Planes',
-            paranoid: true,
         };
     }
 }
