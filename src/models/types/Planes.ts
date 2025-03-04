@@ -49,6 +49,7 @@ const Planeschema = {
     version: {
         type: DataTypes.INTEGER,
         allowNull: false,
+        defaultValue: 1,
     },
     estado: {
         type: DataTypes.ENUM('Elaborado', 'Validado', 'Autorizado', 'Publicado', 'Cancelado'),
@@ -68,7 +69,6 @@ class Planes extends Model {
             tableName: PLANES_TABLE,
             modelName: 'Planes',
             paranoid: true,
-            timestamps: true,
         };
     }
 }
