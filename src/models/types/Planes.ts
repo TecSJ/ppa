@@ -16,6 +16,7 @@ const Planeschema = {
             model: 'Programas',
             key: 'idPrograma',
         },
+        field: 'idPrograma',
     },
     clave: {
         type: DataTypes.STRING,
@@ -43,6 +44,10 @@ const Planeschema = {
     },
     documento: {
         type: DataTypes.STRING,
+        allowNull: false,
+    },
+    version: {
+        type: DataTypes.INTEGER,
         allowNull: false,
     },
     estado: {
