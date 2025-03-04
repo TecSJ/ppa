@@ -62,7 +62,7 @@ class Modulo extends Model {
         return {
         sequelize,
         tableName: MODULO_TABLE,
-        modelName: 'Modulo',
+        modelName: 'Modulos',
         };
     }
 }
