@@ -25,12 +25,10 @@ export const createServer = async (): Promise<FastifyInstance> => {
     fastify = Fastify({ logger: true });
   }
 
-  // Cargar plugins
   await fastify.register(AutoLoad, {
     dir: path.join(__dirname, 'plugins'),
   });
 
-  // Cargar rutas con prefijo /api
   await fastify.register(AutoLoad, {
     dir: path.join(__dirname, 'routes'),
     ignorePattern: /.*(schema).*/,
@@ -40,11 +38,10 @@ export const createServer = async (): Promise<FastifyInstance> => {
   return fastify;
 };
 
-// 🔹 Asegurarse de resolver la promesa antes de llamar `listen`
 if (require.main === module) {
   (async () => {
     try {
-      const fastify = await createServer(); // 👈 Resolver promesa antes de usar `fastify`
+      const fastify = await createServer();
       const PORT = process.env.PORT 
         ? parseInt(process.env.PORT, 10) 
         : process.env.NODE_ENV === 'production' ? 443 : 3005;

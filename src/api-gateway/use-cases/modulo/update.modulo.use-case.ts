@@ -9,7 +9,7 @@ interface ModuloAttributes {
     abreviatura?: string;
     nombre?: string;
     creditos?: number;
-    asignatuas?: number;
+    asignaturas?: number;
     tipo?: string;
     estado?: string;
 }
