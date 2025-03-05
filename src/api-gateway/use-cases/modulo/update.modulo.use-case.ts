@@ -18,13 +18,10 @@ type UpdateModuloData = Optional<ModuloAttributes, 'idModulo'>;
 
 const updateModulo = async (idModulo: number, data: UpdateModuloData) => {
   try {
-
     const [affectedRows] = await updateQuery(Modulo)(data, { idModulo });
-
     if (affectedRows === 0) {
       return null;
     }
-
     return await Modulo.findOne({ where: { idModulo } });
   } catch (error) {
     console.error('Error en updateModulo:', error);

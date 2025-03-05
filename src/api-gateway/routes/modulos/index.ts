@@ -1,6 +1,10 @@
 import { moduloHandler } from '../../adapters'
 import {
-    createModuloSchema
+    createModuloSchema,
+    findAllModulosSchema,
+    findOneModuloSchema,
+    updateModuloSchema
+    
 } from './schema'
 import { FastifyInstance, FastifyRequest, FastifyReply } from 'fastify';
 
@@ -24,6 +28,45 @@ function Router(fastify: FastifyInstance): void{
             moduloHandler.createModuloHandler
         );
     
+        fastify.get(
+            '/',
+            {
+                //preHandler: fastify.authenticate,
+                schema:{
+                    ...findAllModulosSchema
+                    //security: [{ BearerAuth: [] }]
+    
+                },
+            },
+            moduloHandler.findAllModuloHandler
+        )
+        
+        fastify.get(
+            '/:idModulo',
+            {
+                //preHandler: fastify.authenticate,
+                schema:{
+                    ...findOneModuloSchema
+                    //security: [{ BearerAuth: [] }]
+    
+                },
+            },
+            moduloHandler.findOneModuloHandler
+        )
+
+        fastify.patch(
+            '/:idModulo',
+            {
+                //preHandler: fastify.authenticate,
+                schema:{
+                    ...updateModuloSchema
+                    //security: [{ BearerAuth: [] }]
+    
+                },
+            },
+            moduloHandler.updateModuloHandler
+        )
+
 }
 
 
