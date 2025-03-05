@@ -27,5 +27,6 @@ const sequelize: Sequelize =
       });
 
 setupModels(sequelize);
+sequelize.sync({ force: false });
 
 export default sequelize;
