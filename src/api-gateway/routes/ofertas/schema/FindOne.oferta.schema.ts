@@ -15,8 +15,13 @@ export const findOneOfertaSchema: FastifySchema = {
         200: {
             description: 'Oferta encontrada',
             type: 'object',
-            properties: {
-                idOferta: { type: 'number' }
+            properties:  {
+                idOferta: { type: 'number' },
+                idPrograma: { type: 'number' },
+                turno: { type: 'string' },
+                espacios: { type: 'number' }, 
+                idPeriodo: { type: 'string' },
+                estado: { type: 'string' },
             },
         },
         404: {

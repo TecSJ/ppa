@@ -10,9 +10,7 @@ export const updateOfertaHandler = async (
   try {
     const { idOferta } = UpdateOfertaSchema.parse(request.params); 
     const { idPrograma, turno, espacios, idPeriodo, estado } = UpdateOfertaBodySchema.parse(request.body); 
-
     const ofertaActualizada = await updateOferta(idOferta, { idPrograma, turno, espacios, idPeriodo, estado });
-
     reply.code(200).send(ofertaActualizada);
   } catch (err: unknown) {
     const error = err instanceof Error ? err : new Error('Unknown error');

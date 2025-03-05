@@ -1,7 +1,6 @@
 import { ofertaHandlers } from '../../adapters'
 import {
     createOfertaSchema,
-    deleteOfertaSchema,
     findAllOfertaSchema,
     findOneOfertaSchema,
     updateOfertaSchema
@@ -20,34 +19,22 @@ function Router(fastify: FastifyInstance): void{
     fastify.post(
         '/',
         {
-            preHandler: fastify.authenticate,
+            //preHandler: fastify.authenticate,
             schema:{
                 ...createOfertaSchema,
-                security: [{ BearerAuth: [] }]
+                //security: [{ BearerAuth: [] }]
             },
         },
         ofertaHandlers.createOfertaHandler
     );
 
-    fastify.delete(
-        '/:idOferta',
-        {
-            preHandler: fastify.authenticate,
-            schema:{
-                ...deleteOfertaSchema,
-                security: [{ BearerAuth: [] }]
-            },
-        },
-        ofertaHandlers.deleteOferttaHandler
-    );
-
     fastify.get(
         '/',
         {
-            preHandler: fastify.authenticate,
+            //preHandler: fastify.authenticate,
             schema:{
                 ...findAllOfertaSchema,
-                security: [{ BearerAuth: [] }]
+                //security: [{ BearerAuth: [] }]
             },
         },
         ofertaHandlers.findAllOfertasHandler
@@ -56,10 +43,10 @@ function Router(fastify: FastifyInstance): void{
     fastify.get(
         '/:idOferta',
         {
-            preHandler: fastify.authenticate,
+            //preHandler: fastify.authenticate,
             schema:{
                 ...findOneOfertaSchema,
-                security: [{ BearerAuth: [] }]
+                //security: [{ BearerAuth: [] }]
             },
         },
         ofertaHandlers.findOneOfertaHandler

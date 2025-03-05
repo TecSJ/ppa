@@ -9,12 +9,12 @@ export const updateOfertaSchema: FastifySchema = {
         required: ['idOferta'],
         type: 'object',
         properties: {
-            idOferta: { type: 'number' },
+            idOferta: { type: 'number' }
         },
     },
     body: {
         type: 'object',
-        properties: oferta, // Usamos el esquema de oferta que definiste anteriormente
+        properties: oferta,
     },
     response: {
         200: {

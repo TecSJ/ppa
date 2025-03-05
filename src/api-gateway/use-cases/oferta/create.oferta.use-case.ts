@@ -8,8 +8,7 @@ const createOferta = async (data: CreateOfertaData) => {
   const existingOferta = await findOneQuery(Oferta)({
     idPrograma: data.idPrograma,
     idPeriodo: data.idPeriodo,
-    turno: data.turno,
-    estado: 'Publicado',
+    turno: data.turno
   });
 
   if (existingOferta) {

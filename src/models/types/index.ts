@@ -15,8 +15,15 @@ export function setupModels(sequelize: Sequelize): void {
     Asignatura.init(AsignaturasSchema, Asignatura.config(sequelize));
     Competencia.init(CompetenciasSchema, Competencia.config(sequelize));
     Conocimiento.init(ConocimientosSchema, Conocimiento.config(sequelize));
+    Programa.init(ProgramasSchema, Programa.config(sequelize));
+    Planes.init(Planeschema, Planes.config(sequelize));
+    Modulo.init(ModulosSchema, Modulo.config(sequelize));
+    Oferta.init(OfertasSchema, Oferta.config(sequelize));
     
     // Aquí se definen las relaciones
     Asignatura.associate(sequelize.models);
     Conocimiento.associate(sequelize.models);
+    Modulo.associate(sequelize.models);
+    Oferta.associate(sequelize.models);
+
 }

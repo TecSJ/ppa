@@ -1,14 +1,16 @@
 import { FastifySchema } from 'fastify';
 import { oferta } from './propeties/oferta';
 
+const { estado, ...Oferta } = oferta;
+
 export const createOfertaSchema: FastifySchema = {
-    tags: ['Oferta'],
+    tags: ['Ofertas'],
     summary: 'Crear una oferta académica',
     description: 'Endpoint para crear una nueva oferta académica',
     body: {
         type: 'object',
         required: ['idPrograma', 'turno', 'espacios', 'idPeriodo'], 
-        properties: oferta,
+        properties: Oferta,
     },
     response: {
         200: {

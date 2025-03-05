@@ -9,8 +9,7 @@ export const CreateOfertaSchema = z.object({
   espacios: z.number().int().min(1).max(255).default(40),
   idPeriodo: z.string().length(5, {
     message: 'idPeriodo debe tener exactamente 5 caracteres',
-  }).default('2025B'),
-  estado: z.enum(['Elaborado', 'Validado', 'Autorizado', 'Publicado', 'Cancelado']).default('Elaborado'),
+  }).default('2025B')
 });
 
 // Esquema para buscar una oferta por su ID

@@ -1,9 +1,4 @@
 export const oferta = {
-    idOferta: {
-        type: 'integer',
-        description: 'Identificador único de la oferta',
-        minimum: 1,
-    },
     idPrograma: {
         type: 'integer',
         description: 'Identificador del programa asociado a la oferta',
