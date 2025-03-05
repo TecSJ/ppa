@@ -1,6 +1,6 @@
 import { Model, DataTypes, Sequelize } from "sequelize";
 
-const OFERTAS_TABLE = 'Ofertas';
+const OFERTA_TABLE = 'Ofertas';
 
 const OfertasSchema = {
   idOferta: {
@@ -47,10 +47,10 @@ class Oferta extends Model {
   static config(sequelize: Sequelize) {
     return {
     sequelize,
-    tableName: OFERTAS_TABLE,
+    tableName: OFERTA_TABLE,
     modelName: 'Ofertas',
     };
   }
 }
 
-export { OFERTAS_TABLE, OfertasSchema, Oferta };
+export { OFERTA_TABLE, OfertasSchema, Oferta };
