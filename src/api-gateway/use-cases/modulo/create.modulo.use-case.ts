@@ -1,20 +1,20 @@
 import { findOneQuery, createQuery } from 'models/queries';
-import { Actividad } from 'models/types/Actividades';
+import { Modulo } from 'models/types/Modulos';
 import { CreationAttributes } from 'sequelize';
 
-type CreateActividadData = CreationAttributes<Actividad>;
+type CreateModuloData = CreationAttributes<Modulo>;
 
-const createActividad = async (data: CreateActividadData) => {
-  const existingActividad = await findOneQuery(Actividad)({
+const createModulo = async (data: CreateModuloData) => {
+  const existingModulo = await findOneQuery(Modulo)({
     idPlan: data.idPlan,
     clave: data.clave,
   });
 
-  if (existingActividad) {
+  if (existingModulo) {
     throw new Error('Ya existe un registro con este nombre');
   }
 
-  return await createQuery(Actividad)(data);
+  return await createQuery(Modulo)(data);
 };
 
-export { createActividad };
+export { createModulo };
