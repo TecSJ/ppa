@@ -19,10 +19,10 @@ function Router(fastify: FastifyInstance): void{
     fastify.post(
         '/',
         {
-            //preHandler: fastify.authenticate,
+            preHandler: fastify.authenticate,
             schema:{
                 ...createModuloSchema,
-                //security: [{ BearerAuth: [] }]
+                security: [{ BearerAuth: [] }]
             },
         },
         moduloHandlers.createModuloHandler
@@ -31,10 +31,10 @@ function Router(fastify: FastifyInstance): void{
     fastify.get(
         '/fa',
         {
-            //preHandler: fastify.authenticate,
+            preHandler: fastify.authenticate,
             schema:{
                 ...findAllModulosSchema,
-                //security: [{ BearerAuth: [] }]
+                security: [{ BearerAuth: [] }]
             },
         },
         moduloHandlers.findAllModuloHandler
@@ -43,10 +43,10 @@ function Router(fastify: FastifyInstance): void{
     fastify.get(
         '/fo/:idModulo',
         {
-            //preHandler: fastify.authenticate,
+            preHandler: fastify.authenticate,
             schema:{
                 ...findOneModuloSchema,
-                //security: [{ BearerAuth: [] }]
+                security: [{ BearerAuth: [] }]
             },
         },
         moduloHandlers.findOneModuloHandler
@@ -55,10 +55,10 @@ function Router(fastify: FastifyInstance): void{
     fastify.patch(
         '/:idModulo',
         {
-            //preHandler: fastify.authenticate,
+            preHandler: fastify.authenticate,
             schema:{
                 ...updateModuloSchema,
-                //security: [{ BearerAuth: [] }]
+                security: [{ BearerAuth: [] }]
             },
         },
         moduloHandlers.updateModuloHandler
