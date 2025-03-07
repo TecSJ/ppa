@@ -8,11 +8,7 @@ export const createModuloHandler = async (
   reply: FastifyReply
 ) => {
   try {
-    const param = request.params as Record<string, unknown>;
-    const bod = request.body as Record<string, unknown>;
-    const dat = { ...param, ...bod };
-
-    const data = CreateModuloSchema.parse(dat);
+    const data = CreateModuloSchema.parse(request.body);
     const newControl = await createModulo(data);
     reply.code(201).send(newControl);
   } catch (err: unknown) {
