@@ -12,7 +12,17 @@ describe('API Tests', () => {
   });
 
   afterAll(async () => {
-    await server.close();
+    if (server && server.server) {
+      try {
+        await server.server.close();
+      } catch (err) {
+        console.error('Error al cerrar el servidor:', err);
+        process.exit(1);
+      }
+    } else {
+      console.error('El servidor no se inicializó correctamente.');
+      process.exit(1); 
+    }
   });
 
   it('Debe responder en el endpoint GET /api/status con 200', async () => {
