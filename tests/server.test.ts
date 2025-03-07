@@ -6,9 +6,14 @@ describe('API Tests', () => {
   let server: any;
 
   beforeAll(async () => {
-    await sequelize.authenticate();
-    server = await createServer();
-    await server.ready();
+    try {
+      server = await createServer();
+      await server.ready();
+      console.log('Servidor inicializado correctamente');
+    } catch (error) {
+      console.error('Error al iniciar el servidor:', error);
+      throw error; // Lanza el error para que los tests fallen si la inicialización falla
+    }
   });
 
   afterAll(async () => {
