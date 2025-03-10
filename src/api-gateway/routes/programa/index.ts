@@ -2,7 +2,9 @@ import { FastifyInstance, FastifyRequest, FastifyReply } from 'fastify';
 import { carreraHandlers } from 'api-gateway/adapters/programas/handlers';
 import { 
     findAllProgramaSchema,
-    createProgramaSchema
+    createProgramaSchema, 
+    findOneProgramaSchema,
+    updateProgramaSchema
 } from './schema/';
 
 declare module 'fastify' {
@@ -36,6 +38,30 @@ function Router(fastify: FastifyInstance): void{
         },
         carreraHandlers.findAllProgramasHandler
     );
+
+    fastify.get(
+        '/:idPrograma',
+        {
+            preHandler: fastify.authenticate,
+            schema: {
+                ...findOneProgramaSchema,
+                security: [{ BearerAuth: [] }]
+            }
+        },
+        carreraHandlers.findOneProgramaHandler
+    )
+
+    fastify.patch(
+        '/:idPrograma',
+        {
+            preHandler: fastify.authenticate,
+            schema: {
+                ...updateProgramaSchema,
+                security: [{ BearerAuth: [] }]
+            }
+        },
+        carreraHandlers.updateProgramaHandler
+    )
 }
 
 export default Router;
