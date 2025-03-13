@@ -1,5 +1,4 @@
 import { FastifySchema } from "fastify";
-import { modulo } from "./propeties/modulo"
 
 export const findOneModuloSchema: FastifySchema = {
     tags: ['Modulos'],
@@ -17,10 +16,17 @@ export const findOneModuloSchema: FastifySchema = {
             description: 'Modulo encontrada',
             type: 'object',
             properties: {
-                idModulo: {
-                    type: 'integer'
-                },
-                ...modulo
+                idModulo: { type: 'integer' },
+                clave: { type: 'string' },
+                abreviatura: { type: 'string' },
+                nombre: { type: 'string' },
+                creditos: { type: 'integer' },
+                asignaturas: { type: 'integer' },
+                tipo: { type: 'string' },
+                estado: { type: 'string' },
+                planDeEstudio: { type: 'string' },
+                carrera: { type: 'string' },
+                unidadAcademica: { type: 'string' },
             }
         },
         404: {
