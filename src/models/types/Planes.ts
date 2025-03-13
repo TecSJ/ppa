@@ -59,8 +59,8 @@ const Planeschema = {
 };
 
 class Planes extends Model {
-    static associate() {
-        // Define associations here if needed
+    static associate(models:any) {
+        this.belongsTo(models.Programas, { foreignKey: 'idPrograma', as: 'programa' });
     }
 
     static config(sequelize: Sequelize) {

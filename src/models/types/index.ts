@@ -25,5 +25,5 @@ export function setupModels(sequelize: Sequelize): void {
     Conocimiento.associate(sequelize.models);
     Modulo.associate(sequelize.models);
     Oferta.associate(sequelize.models);
-
+    Planes.associate(sequelize.models);
 }

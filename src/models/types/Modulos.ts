@@ -55,7 +55,7 @@ const ModulosSchema = {
 
 class Modulo extends Model {
     static associate(models:any){
-        this.belongsTo(models.Planes, { foreignKey: 'idPlan' ,as: 'Planes' });
+        this.belongsTo(models.Planes, { foreignKey: 'idPlan' ,as: 'plan' });
     }
 
     static config(sequelize: Sequelize) {
