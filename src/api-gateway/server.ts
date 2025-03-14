@@ -13,7 +13,7 @@ export const createServer = async () => {
   const fastify = Fastify({ logger: true });
 
   fastify.register(cors, {
-    origin: process.env.URL, 
+    origin: '*', 
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization','api_key'],
   });
