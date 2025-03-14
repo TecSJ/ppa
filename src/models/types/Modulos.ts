@@ -1,4 +1,4 @@
-import { Model, DataTypes, Sequelize } from "sequelize";
+import { Model, DataTypes, Sequelize, ModelStatic } from "sequelize";
 
 const MODULO_TABLE = 'Modulos';
 
@@ -54,7 +54,7 @@ const ModulosSchema = {
 };
 
 class Modulo extends Model {
-    static associate(models:any){
+    static associate(models: { Planes: ModelStatic<Model> }) {
         this.belongsTo(models.Planes, { foreignKey: 'idPlan' ,as: 'plan' });
     }
 
