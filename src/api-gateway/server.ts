@@ -3,6 +3,7 @@ import AutoLoad from '@fastify/autoload';
 import path from 'path';
 import dotenv from 'dotenv';
 import sequelize from 'models/config/database';
+import cors from '@fastify/cors';
 
 dotenv.config();
 
@@ -10,6 +11,12 @@ export const createServer = async () => {
   await sequelize.sync({ force: false, alter: false });
 
   const fastify = Fastify({ logger: true });
+
+  fastify.register(cors, {
+    origin: process.env.URL, 
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization','api_key'],
+  });
 
   fastify.register(AutoLoad, {
     dir: path.join(__dirname, 'plugins'),

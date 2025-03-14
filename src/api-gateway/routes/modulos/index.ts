@@ -31,10 +31,8 @@ function Router(fastify: FastifyInstance): void{
     fastify.get(
         '/fa',
         {
-            preHandler: fastify.authenticate,
             schema:{
                 ...findAllModulosSchema,
-                security: [{ BearerAuth: [] }]
             },
         },
         moduloHandlers.findAllModuloHandler
