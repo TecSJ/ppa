@@ -3,9 +3,9 @@ import { Modulo } from 'models/types/Modulos';
 import { Planes } from 'models/types/Planes';
 import { Programa } from 'models/types/Programas';
 
-type ModuloAttributes = Partial<Modulo>;
-
-type FindOneModuloData = Partial<ModuloAttributes>;
+type FindOneModuloData = {
+  idModulo: number;
+};
 
 const findOneModulo = async (where: FindOneModuloData) => {
   return await findOneQuery(Modulo)(
