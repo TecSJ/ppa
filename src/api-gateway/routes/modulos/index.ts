@@ -29,7 +29,7 @@ function Router(fastify: FastifyInstance): void{
     );
 
     fastify.get(
-        '/fa',
+        '/',
         {
             schema:{
                 ...findAllModulosSchema,
