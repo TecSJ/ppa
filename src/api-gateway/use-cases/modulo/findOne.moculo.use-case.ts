@@ -14,12 +14,12 @@ const findOneModulo = async (where: FindOneModuloData) => {
         {
           model: Planes,
           as: "plan",
-          attributes: [["clave","planDeEstudio"], "idPrograma"],
+          attributes: [["clave", "planDeEstudio"], "idPrograma"],
           include: [
             {
               model: Programa,
               as: "programa",
-              attributes: ["abreviatura", "idPlantel"],
+              attributes: [["abreviatura", "carrera"], ["idPlantel", "unidadAcademica"]],
             },
           ],
         },

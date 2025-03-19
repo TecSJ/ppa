@@ -33,10 +33,10 @@ export const findOneModuloSchema: FastifySchema = {
                                         programa: {
                                             type: 'object',
                                             properties: {
-                                                abreviatura: {
+                                                carrera: {
                                                     type: 'string',
                                                 },
-                                                idPlantel: {
+                                                unidadAcademica: {
                                                     type: 'string',
                                                 }
                                             },
