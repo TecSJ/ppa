@@ -1,6 +1,6 @@
 import { Model, DataTypes, Sequelize } from "sequelize";
 
-const PLANES_TABLE = 'Planes';
+const PLAN_TABLE = 'Planes';
 
 const Planeschema = {
     idPlan: {
@@ -66,7 +66,7 @@ class Planes extends Model {
     static config(sequelize: Sequelize) {
         return {
             sequelize,
-            tableName: PLANES_TABLE,
+            tableName: PLAN_TABLE,
             modelName: 'Planes',
         };
     }
