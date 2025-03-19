@@ -17,7 +17,7 @@ const findAllModulos = async (where?: FindAllModulosData) => {
           {
             model: Programa,
             as: "programa",
-            attributes: ["abreviatura", "idPlantel"],
+            attributes: [["abreviatura", "carrera"], ["idPlantel", "unidadAcademica"]],
           },
         ],
       },

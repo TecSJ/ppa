@@ -28,10 +28,10 @@ export const findAllModulosSchema: FastifySchema = {
                             programa: {
                                 type: 'object',
                                 properties: {
-                                    abreviatura: {
+                                    carrera: {
                                         type: 'string',
                                     },
-                                    idPlantel: {
+                                    unidadAcademica: {
                                         type: 'string',
                                     }
                                 },
