@@ -1,5 +1,5 @@
 import { FastifySchema } from "fastify";
-import { plan } from "./properties/plan"
+import { plan } from "./properties/plan";
 
 export const findAllPlanesSchema: FastifySchema = {
     tags: ['Planes'],
@@ -16,6 +16,14 @@ export const findAllPlanesSchema: FastifySchema = {
                         type: 'integer'
                     },
                     ...plan,
+                    programa: {
+                        type: 'object',
+                        properties: {
+                            idPlantel: {
+                                type: 'string',
+                            }
+                        },
+                    }
                 }
             },
         },
