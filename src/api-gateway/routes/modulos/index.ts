@@ -39,12 +39,12 @@ function Router(fastify: FastifyInstance): void{
     );
 
     fastify.get(
-        '/fo/:idModulo',
+        '/:idModulo',
         {
-            preHandler: fastify.authenticate,
+            //preHandler: fastify.authenticate,
             schema:{
                 ...findOneModuloSchema,
-                security: [{ BearerAuth: [] }]
+                //security: [{ BearerAuth: [] }]
             },
         },
         moduloHandlers.findOneModuloHandler
