@@ -72,4 +72,4 @@ class Planes extends Model {
     }
 }
 
-export { PLANES_TABLE, Planeschema, Planes };
+export { PLAN_TABLE, Planeschema, Planes };
