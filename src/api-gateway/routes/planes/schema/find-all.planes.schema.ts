@@ -21,6 +21,9 @@ export const findAllPlanesSchema: FastifySchema = {
                         properties: {
                             idPlantel: {
                                 type: 'string',
+                            },
+                            nombre: {
+                                type: 'string',
                             }
                         },
                     }
