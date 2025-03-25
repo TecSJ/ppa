@@ -34,15 +34,13 @@ export const plan ={
     documento: {
         type: 'string',
         description: 'documento debe ser un string',
-        minLength: 1,
-        maxLength: 255,
     },
     version: {
         type: 'integer',
         description: 'version debe ser un integer'
     },
     estado: {
-        type: "string", 
+        type: 'string', 
         enum: ["Elaborado", "Validado", "Autorizado", "Publicado", "Cancelado"],
     },
 }
