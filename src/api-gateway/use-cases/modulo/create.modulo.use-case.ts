@@ -1,6 +1,6 @@
 import { findOneQuery, createQuery } from 'models/queries';
 import { Modulo } from 'models/types/Modulos';
-import { CreationAttributes } from 'sequelize';
+import { CreationAttributes, Op } from 'sequelize';
 
 type CreateModuloData = CreationAttributes<Modulo>;
 
@@ -8,6 +8,7 @@ const createModulo = async (data: CreateModuloData) => {
   const existingModulo = await findOneQuery(Modulo)({
     idPlan: data.idPlan,
     clave: data.clave,
+    estado: { [Op.ne]: 'Cancelado' },
   });
 
   if (existingModulo) {

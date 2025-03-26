@@ -19,10 +19,10 @@ function Router(fastify: FastifyInstance): void{
     fastify.post(
         '/',
         {
-            preHandler: fastify.authenticate,
+            //preHandler: fastify.authenticate,
             schema:{
                 ...createModuloSchema,
-                security: [{ BearerAuth: [] }]
+                //security: [{ BearerAuth: [] }]
             },
         },
         moduloHandlers.createModuloHandler
@@ -53,10 +53,10 @@ function Router(fastify: FastifyInstance): void{
     fastify.patch(
         '/:idModulo',
         {
-            preHandler: fastify.authenticate,
+            //preHandler: fastify.authenticate,
             schema:{
                 ...updateModuloSchema,
-                security: [{ BearerAuth: [] }]
+                //security: [{ BearerAuth: [] }]
             },
         },
         moduloHandlers.updateModuloHandler

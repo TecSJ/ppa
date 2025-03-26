@@ -31,10 +31,10 @@ function Router(fastify: FastifyInstance): void{
     fastify.get(
         '/',
         {
-            preHandler: fastify.authenticate,
+            //preHandler: fastify.authenticate,
             schema:{
                 ...findAllPlanesSchema,
-                security: [{ BearerAuth: [] }]
+                //security: [{ BearerAuth: [] }]
             },
         },
         planHandlers.findAllPlanesHandler,

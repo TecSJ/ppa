@@ -30,10 +30,10 @@ function Router(fastify: FastifyInstance): void{
     fastify.get(
         '/fa', 
         {
-            preHandler: fastify.authenticate,
+            //preHandler: fastify.authenticate,
             schema:{
                 ...findAllProgramaSchema,
-                security: [{ BearerAuth: [] }]
+                //security: [{ BearerAuth: [] }]
             },
         },
         carreraHandlers.findAllProgramasHandler
