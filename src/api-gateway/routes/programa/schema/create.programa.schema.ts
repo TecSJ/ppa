@@ -12,19 +12,16 @@ export const createProgramaSchema: FastifySchema = {
     },
     response: {
         201: {
-            description: 'Programa creado',
-            type: 'array',
-            items: {
-                type: 'object',
-                properties: programa
-            },
+            description: 'programa creado',
+            type: 'object',
+            properties: programa
         },
         500: {
             description: 'solicitud invalida',
             type: 'object',
             properties: {
                 error: { type: 'string' },
-                message: { type: 'string'},
+                message: { type: 'string' },
             },
         },
     }
