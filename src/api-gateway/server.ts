@@ -14,7 +14,7 @@ export const createServer = async () => {
 
   fastify.register(cors, {
     origin: '*', 
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    methods: ['GET', 'POST', 'PATCH', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization','api_key'],
   });
 
