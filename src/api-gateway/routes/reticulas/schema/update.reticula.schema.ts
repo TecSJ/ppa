@@ -2,7 +2,7 @@ import { FastifySchema } from 'fastify';
 import { reticula } from './properties/reticula'
 
 export const updateReticulaSchema: FastifySchema = {
-    tags: ['Reticula'],
+    tags: ['Reticulas'],
     summary: 'Actualizar una Retícula',
     description: 'Endpoint para actualizar una Retícula',
     params: {
