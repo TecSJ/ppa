@@ -3,7 +3,7 @@ import { reticula } from "./properties/reticula"
 import { asignatura } from "./properties/asignatura"
 
 export const findOneReticulaSchema: FastifySchema = {
-    tags: ['Reticula'],
+    tags: ['Reticulas'],
     summary: 'Buscar una retícula',
     description: 'Endpoint para buscar una Retícula',
     params: {
