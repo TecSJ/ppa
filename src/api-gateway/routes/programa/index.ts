@@ -18,10 +18,10 @@ function Router(fastify: FastifyInstance): void{
     fastify.post(
         '/',
         {
-            preHandler: fastify.authenticate,
+            //preHandler: fastify.authenticate,
             schema:{
                 ...createProgramaSchema,
-                security: [{ BearerAuth: [] }]
+                //security: [{ BearerAuth: [] }]
             },
         },
         carreraHandlers.createProgramaHandler
@@ -30,10 +30,10 @@ function Router(fastify: FastifyInstance): void{
     fastify.get(
         '/fa', 
         {
-            preHandler: fastify.authenticate,
+            //preHandler: fastify.authenticate,
             schema:{
                 ...findAllProgramaSchema,
-                security: [{ BearerAuth: [] }]
+                //security: [{ BearerAuth: [] }]
             },
         },
         carreraHandlers.findAllProgramasHandler
@@ -54,10 +54,10 @@ function Router(fastify: FastifyInstance): void{
     fastify.patch(
         '/:idPrograma',
         {
-            preHandler: fastify.authenticate,
+            //preHandler: fastify.authenticate,
             schema: {
                 ...updateProgramaSchema,
-                security: [{ BearerAuth: [] }]
+                //security: [{ BearerAuth: [] }]
             }
         },
         carreraHandlers.updateProgramaHandler

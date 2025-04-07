@@ -35,6 +35,7 @@ function Router(fastify: FastifyInstance): void{
             schema:{
                 ...findAllPlanesSchema,
                 // security: [{ BearerAuth: [] }]
+
             },
         },
         planHandlers.findAllPlanesHandler,
