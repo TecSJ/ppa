@@ -1,5 +1,5 @@
 import { FastifyInstance, FastifyRequest, FastifyReply } from 'fastify';
-import { carreraHandlers } from 'api-gateway/adapters/programas/handlers';
+import { carreraHandlers } from '@api-gateway/adapters/programas/handlers';
 import { 
     findAllProgramaSchema,
     createProgramaSchema, 

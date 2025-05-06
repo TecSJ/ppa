@@ -4,8 +4,8 @@ type AsignaturaAttributes = {
   
   type DeleteAsignaturaData = Partial<AsignaturaAttributes>;
   
-  import { deleteQuery } from 'models/queries';
-  import { Asignatura } from 'models/types/Asignaturas';
+  import { deleteQuery } from '@models/queries';
+  import { Asignatura } from '@models/types/Asignaturas';
   
   const deleteAsignatura = async (where: DeleteAsignaturaData) => {
     return await deleteQuery(Asignatura)(where);

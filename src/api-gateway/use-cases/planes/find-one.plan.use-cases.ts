@@ -14,8 +14,8 @@ type PlanAttributes = {
   
   type FindOnePlanData = Partial<PlanAttributes>;
   
-  import { findOneQuery } from 'models/queries';
-  import { Planes } from 'models/types/Planes';
+  import { findOneQuery } from '@models/queries';
+  import { Planes } from '@models/types/Planes';
   
   const findOnePlan = async (where: FindOnePlanData) => {
     return await findOneQuery(Planes)(where);

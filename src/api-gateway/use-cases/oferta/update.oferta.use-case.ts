@@ -1,5 +1,5 @@
-import { updateQuery} from 'models/queries';
-import { Oferta } from 'models/types/Ofertas';
+import { updateQuery} from '@models/queries';
+import { Oferta } from '@models/types/Ofertas';
 import { Optional } from 'sequelize';
 
 interface OfertaAttributes {

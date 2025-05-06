@@ -1,5 +1,5 @@
-import { findOneQuery, createQuery } from 'models/queries';
-import { Oferta } from 'models/types/Ofertas';
+import { findOneQuery, createQuery } from '@models/queries';
+import { Oferta } from '@models/types/Ofertas';
 import { CreationAttributes } from 'sequelize';
 
 type CreateOfertaData = CreationAttributes<Oferta>;

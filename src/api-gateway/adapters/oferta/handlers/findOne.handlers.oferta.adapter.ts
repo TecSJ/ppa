@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import { FindOneOfertaSchema } from 'validators/oferta'; 
+import { FindOneOfertaSchema } from '@validators/oferta'; 
 import { findOneOferta } from '../../../use-cases/oferta';
 import { handleError } from '../../../utils/error.handler';
 

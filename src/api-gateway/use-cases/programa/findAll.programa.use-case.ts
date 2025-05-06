@@ -1,5 +1,5 @@
-import { findAllQuery } from 'models/queries';
-import { Programa } from 'models/types/Programas';
+import { findAllQuery } from '@models/queries';
+import { Programa } from '@models/types/Programas';
 
 type FindAllProgramasData = Partial<Programa>
 

@@ -1,5 +1,5 @@
-import { findOneQuery } from 'models/queries';
-import { Oferta } from 'models/types/Ofertas';
+import { findOneQuery } from '@models/queries';
+import { Oferta } from '@models/types/Ofertas';
 
 type OfertaAttributes = {
   idOferta: number;

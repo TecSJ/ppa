@@ -1,5 +1,5 @@
-import { updateQuery} from 'models/queries';
-import { Actividad } from 'models/types/Actividades';
+import { updateQuery} from '@models/queries';
+import { Actividad } from '@models/types/Actividades';
 import { Optional } from 'sequelize';
 
 interface ActividadAttributes {

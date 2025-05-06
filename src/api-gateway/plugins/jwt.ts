@@ -11,7 +11,7 @@ const autenticacion: FastifyPluginAsync = async (fastify) => {
             const TOKEN = authHeader && authHeader.split(' ')[1];
 
             if (!TOKEN) { throw new Error('Usuario no autenticado!'); }
-            const keypath = path.resolve(__dirname, '../../models/public.key');
+            const keypath = path.resolve(__dirname, '../../@models/public.key');
             const llave = fs.readFileSync(keypath, 'utf8');
             const opcionesVerificacion = {
                 issuer: 'Tecnologico superior de Jalisco',

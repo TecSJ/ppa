@@ -1,5 +1,5 @@
-import { findOneQuery, createQuery } from 'models/queries';
-import { Modulo } from 'models/types/Modulos';
+import { findOneQuery, createQuery } from '@models/queries';
+import { Modulo } from '@models/types/Modulos';
 import { CreationAttributes, Op } from 'sequelize';
 
 type CreateModuloData = CreationAttributes<Modulo>;

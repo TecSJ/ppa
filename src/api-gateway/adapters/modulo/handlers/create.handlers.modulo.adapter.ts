@@ -1,6 +1,6 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
 import { createModulo } from '../../../use-cases/modulo';
-import { CreateModuloSchema } from 'validators/modulo';
+import { CreateModuloSchema } from '@validators/modulo';
 import { handleError } from '../../../utils/error.handler';
 
 export const createModuloHandler = async (

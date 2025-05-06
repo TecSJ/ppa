@@ -1,5 +1,5 @@
-import { findAllQuery } from 'models/queries';
-import { Actividad } from 'models/types/Actividades';
+import { findAllQuery } from '@models/queries';
+import { Actividad } from '@models/types/Actividades';
 
 type FindAllActividadsData = Partial<Actividad>;
 

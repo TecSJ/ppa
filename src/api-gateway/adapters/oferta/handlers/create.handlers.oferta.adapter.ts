@@ -1,6 +1,6 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
 import { createOferta } from '../../../use-cases/oferta';
-import { CreateOfertaSchema } from 'validators/oferta';
+import { CreateOfertaSchema } from '@validators/oferta';
 import { handleError } from '../../../utils/error.handler';
 
 export const createOfertaHandler = async (

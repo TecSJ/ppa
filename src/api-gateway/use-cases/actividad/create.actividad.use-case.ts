@@ -1,5 +1,5 @@
-import { findOneQuery, createQuery } from 'models/queries';
-import { Actividad } from 'models/types/Actividades';
+import { findOneQuery, createQuery } from '@models/queries';
+import { Actividad } from '@models/types/Actividades';
 import { CreationAttributes } from 'sequelize';
 
 type CreateActividadData = CreationAttributes<Actividad>;

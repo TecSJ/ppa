@@ -1,5 +1,5 @@
-import { updateQuery} from 'models/queries';
-import { Asignatura } from 'models/types/Asignaturas';
+import { updateQuery} from '@models/queries';
+import { Asignatura } from '@models/types/Asignaturas';
 import { Optional } from 'sequelize';
 
 interface AsignaturaAttributes {

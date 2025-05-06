@@ -1,6 +1,6 @@
 import { createServer } from '../src/api-gateway/server';
 import request from 'supertest';
-import sequelize from 'models/config/database'; // Importamos sequelize para hacer una validación
+import sequelize from '@models/config/database'; // Importamos sequelize para hacer una validación
 
 describe('API Tests', () => {
   let server: any;

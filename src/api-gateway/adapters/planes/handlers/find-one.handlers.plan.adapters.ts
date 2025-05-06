@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import { FindOnePlanSchema } from 'validators/planes'; 
+import { FindOnePlanSchema } from '@validators/planes'; 
 import { findOnePlan } from '../../../use-cases/planes';
 import { handleError } from '../../../utils/error.handler';
 

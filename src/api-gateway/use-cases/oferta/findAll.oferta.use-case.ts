@@ -1,5 +1,5 @@
-import { findAllQuery } from 'models/queries';
-import { Oferta } from 'models/types/Ofertas';
+import { findAllQuery } from '@models/queries';
+import { Oferta } from '@models/types/Ofertas';
 
 type FindAllOfertaData = Partial<Oferta>;
 

@@ -1,5 +1,5 @@
-import { findOneQuery, createQuery } from 'models/queries';
-import { Planes } from 'models/types/Planes';
+import { findOneQuery, createQuery } from '@models/queries';
+import { Planes } from '@models/types/Planes';
 import { CreationAttributes } from 'sequelize';
 
 type CreatePlanData = CreationAttributes<Planes>;

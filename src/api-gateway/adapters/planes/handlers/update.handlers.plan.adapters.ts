@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import { UpdatePlanSchema, UpdatePlanBodySchema } from 'validators/planes'; 
+import { UpdatePlanSchema, UpdatePlanBodySchema } from '@validators/planes'; 
 import { updatePlan } from '../../../use-cases/planes';
 import { handleError } from '../../../utils/error.handler';
 

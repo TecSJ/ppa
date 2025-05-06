@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import { FindAllActividadSchema } from 'validators/actividad';
+import { FindAllActividadSchema } from '@validators/actividad';
 import { findAllActividades } from '../../../use-cases/actividad';
 import { handleError } from '../../../utils/error.handler';
 
