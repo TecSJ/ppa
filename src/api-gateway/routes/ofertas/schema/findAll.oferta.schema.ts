@@ -1,4 +1,5 @@
 import { FastifySchema } from "fastify";
+import { oferta } from "./propeties/oferta";
 
 export const findAllOfertaSchema: FastifySchema = {
     tags: ['Ofertas'],
@@ -12,11 +13,16 @@ export const findAllOfertaSchema: FastifySchema = {
                 type: 'object',
                 properties: {
                     idOferta: { type: 'number' },
-                    idPrograma: { type: 'number' },
-                    turno: { type: 'string' },
-                    espacios: { type: 'number' }, 
-                    idPeriodo: { type: 'string' },
-                    estado: { type: 'string' },
+                    ...oferta,
+                    programa: {
+                        type: 'object',
+                        properties: {
+                            idPrograma: { type: 'number' },
+                            codigo: { type: 'string' },
+                            nombre: { type: 'string' },
+                            idPlantel: { type: 'string' }
+                        },
+                    },
                 }
             },
         },

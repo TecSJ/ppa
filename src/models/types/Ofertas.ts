@@ -1,4 +1,4 @@
-import { Model, DataTypes, Sequelize } from "sequelize";
+import { Model, DataTypes, Sequelize, ModelStatic } from "sequelize";
 
 const OFERTA_TABLE = 'Ofertas';
 
@@ -41,8 +41,8 @@ const OfertasSchema = {
 };
 
 class Oferta extends Model {
-  static associate(models: any) {
-    this.belongsTo(models.Programas, { foreignKey: 'idPrograma', as: 'Programas' });
+  static associate(models: { Programas: ModelStatic<Model> }) {
+    this.belongsTo(models.Programas, { foreignKey: 'idPrograma', as: 'programa' });
   }
   static config(sequelize: Sequelize) {
     return {

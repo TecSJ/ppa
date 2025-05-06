@@ -48,14 +48,10 @@ export const DeleteOfertaSchema = z.object({
 
 // Esquema para buscar todas las ofertas (con paginación y filtros)
 export const FindAllOfertaSchema = z.object({
-  idPrograma: z.number().int().positive({
-    message: 'idPrograma debe ser un número entero positivo',
-  }).optional(),
+  idPrograma: z.number().int().optional(),
   turno: z.enum(['Matutino', 'Vespertino', 'Mixto']).optional(),
   espacios: z.number().int().min(1).max(255).optional(),
-  idPeriodo: z.string().length(5, {
-    message: 'idPeriodo debe tener exactamente 5 caracteres',
-  }).optional(),
+  idPeriodo: z.string().length(5).optional(),
   estado: z.enum(['Elaborado', 'Validado', 'Autorizado', 'Publicado', 'Cancelado']).optional(),
   page: z.number().int().min(1).optional(),
   limit: z.number().int().min(1).optional(),
