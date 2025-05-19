@@ -1,5 +1,5 @@
-import { findOneQuery, createQuery } from 'models/queries';
-import { Reticulas } from 'models/types/Reticulas';
+import { findOneQuery, createQuery } from '@models/queries';
+import { Reticulas } from '@models/types/Reticulas';
 import { CreationAttributes } from 'sequelize';
 
 type CreateReticulaData = CreationAttributes<Reticulas>;

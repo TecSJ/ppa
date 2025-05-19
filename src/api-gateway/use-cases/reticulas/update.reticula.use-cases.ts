@@ -1,5 +1,5 @@
-import { updateQuery} from 'models/queries';
-import { Reticulas } from 'models/types/Reticulas';
+import { updateQuery} from '@models/queries';
+import { Reticulas } from '@models/types/Reticulas';
 import { Optional } from 'sequelize';
 
 type ReticulaAttributes = {

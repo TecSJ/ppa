@@ -1,6 +1,6 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
 import { createReticula } from '../../../use-cases/reticulas';
-import { CreateReticulaSchema } from 'validators/reticulas';
+import { CreateReticulaSchema } from '@validators/reticulas';
 import { handleError } from '../../../utils/error.handler';
 
 export const createReticulaHandler = async (

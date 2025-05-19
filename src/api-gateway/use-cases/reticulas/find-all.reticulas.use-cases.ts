@@ -1,7 +1,7 @@
-import { findAllQuery } from 'models/queries';
-import { Reticulas } from 'models/types/Reticulas';
-import { Asignatura } from 'models/types/Asignaturas';
-import { Planes } from 'models/types/Planes';
+import { findAllQuery } from '@models/queries';
+import { Reticulas } from '@models/types/Reticulas';
+import { Asignatura } from '@models/types/Asignaturas';
+import { Planes } from '@models/types/Planes';
 
 type FindAllReticulasData = Partial<Reticulas>;
 
