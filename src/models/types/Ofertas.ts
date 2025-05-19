@@ -29,7 +29,7 @@ const OfertasSchema = {
     defaultValue: 40
   },
   idPeriodo: {
-    type: DataTypes.STRING,
+    type: DataTypes.ENUM('2025B', '2025A', '2026B', '2026A'),
     allowNull: false,
     defaultValue: '2025B'
   },

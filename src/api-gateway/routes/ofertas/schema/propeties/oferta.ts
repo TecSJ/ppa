@@ -20,8 +20,7 @@ export const oferta = {
     idPeriodo: {
         type: 'string',
         description: 'Identificador del periodo académico',
-        minLength: 5,
-        maxLength: 5,
+        enum: ['2025B', '2025A', '2026B', '2026A'],
         default: '2025B',
     },
     estado: {

@@ -55,10 +55,10 @@ function Router(fastify: FastifyInstance): void{
     fastify.patch(
         '/:idOferta',
         {
-            preHandler: fastify.authenticate,
+            //preHandler: fastify.authenticate,
             schema:{
                 ...updateOfertaSchema,
-                security: [{ BearerAuth: [] }]
+                //security: [{ BearerAuth: [] }]
             },
         },
         ofertaHandlers.updateOfertaHandler
