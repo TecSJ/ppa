@@ -9,7 +9,6 @@ export const createProgramaHandler = async (
 ) => {
     try{
         const data = CreateProgramaSchema.parse(request.body);
-        console.log(data);
         const newPrograma = await createPrograma(data);
         reply.code(201).send(newPrograma);
     }catch(err: unknown){

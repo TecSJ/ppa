@@ -18,10 +18,10 @@ function Router(fastify: FastifyInstance): void{
     fastify.post(
         '/',
         {
-            preHandler: fastify.authenticate,
+            //preHandler: fastify.authenticate,
             schema:{
                 ...createProgramaSchema,
-                security: [{ BearerAuth: [] }]
+                //security: [{ BearerAuth: [] }]
             },
         },
         carreraHandlers.createProgramaHandler

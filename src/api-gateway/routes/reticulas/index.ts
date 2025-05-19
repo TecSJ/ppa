@@ -1,9 +1,9 @@
-import { planHandlers } from '../../adapters'
+import { reticulaHandlers } from '../../adapters'
 import {
-    findOnePlanSchema,
-    findAllPlanesSchema,
-    createPlanSchema,
-    updatePlanSchema,
+    findOneReticulaSchema,
+    findAllReticulasSchema,
+    createReticulaSchema,
+    updateReticulaSchema,
 } from './schema'
 import { FastifyInstance, FastifyRequest, FastifyReply } from 'fastify';
 
@@ -14,18 +14,18 @@ declare module 'fastify' {
     }
 };
 
-function Router(fastify: FastifyInstance): void{
+function Router(fastify: FastifyInstance): void {
 
     fastify.get(
-        '/:idPlan',
+        '/:idReticula',
         {
             // preHandler: fastify.authenticate,
             schema:{
-                ...findOnePlanSchema,
+                ...findOneReticulaSchema,
                 // security: [{ BearerAuth: [] }]
             },
         },
-        planHandlers.findOnePlanHandler,
+        reticulaHandlers.findOneReticulaHandler,
     );
 
     fastify.get(
@@ -33,12 +33,11 @@ function Router(fastify: FastifyInstance): void{
         {
             // preHandler: fastify.authenticate,
             schema:{
-                ...findAllPlanesSchema,
+                ...findAllReticulasSchema,
                 // security: [{ BearerAuth: [] }]
-
             },
         },
-        planHandlers.findAllPlanesHandler,
+        reticulaHandlers.findAllReticulasHandler,
     );
 
     fastify.post(
@@ -46,23 +45,23 @@ function Router(fastify: FastifyInstance): void{
         {
             // preHandler: fastify.authenticate,
             schema:{
-                ...createPlanSchema,
+                ...createReticulaSchema,
                 // security: [{ BearerAuth: [] }]
             },
         },
-        planHandlers.createPlanHandler,
+        reticulaHandlers.createReticulaHandler,
     );
 
     fastify.patch(
-        '/:idPlan',
+        '/:idReticula',
         {
             // preHandler: fastify.authenticate,
             schema:{
-                ...updatePlanSchema,
+                ...updateReticulaSchema,
                 // security: [{ BearerAuth: [] }]
             },
         },
-        planHandlers.updatePlanHandler,
+        reticulaHandlers.updateReticulaHandler,
     );
 
 }

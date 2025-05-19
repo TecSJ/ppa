@@ -23,6 +23,10 @@ const AsignaturasSchema = {
         allowNull: false,
         unique: true
     },
+    abreviatura: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
     nombre: {
         type: DataTypes.STRING,
         allowNull: false,

@@ -2,7 +2,7 @@ import { Model, DataTypes, Sequelize } from "sequelize";
 
 const PLAN_TABLE = 'Planes';
 
-const Planeschema = {
+const PlanesSchema = {
     idPlan: {
         primaryKey: true,
         type: DataTypes.INTEGER,
@@ -59,6 +59,7 @@ const Planeschema = {
 };
 
 class Planes extends Model {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     static associate(models:any) {
         this.belongsTo(models.Programas, { foreignKey: 'idPrograma', as: 'programa' });
     }
@@ -72,4 +73,4 @@ class Planes extends Model {
     }
 }
 
-export { PLAN_TABLE, Planeschema, Planes };
+export { PLAN_TABLE, PlanesSchema, Planes };

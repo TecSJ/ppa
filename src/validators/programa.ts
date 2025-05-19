@@ -8,6 +8,7 @@ export const CreateProgramaSchema = z.object({
     certificacion: z.string().min(1).max(6),
     modalidad: z.enum(['Escolarizado','Mixta','A distancia']),
     nivel: z.enum(['Licenciatura','Ingeniería','Maestría']),
+    documento: z.string().min(1).max(100),
     idPlantel: z.string().min(1).max(2),
 });
 
@@ -47,6 +48,7 @@ export const updateBodyProgramaSchema = z.object({
     certificacion: z.string().min(1).max(6).optional(),
     modalidad: z.enum(['Escolarizado','Mixta','A distancia']).optional(),
     nivel: z.enum(['Licenciatura','Ingeniería','Maestría']).optional(),
+    documento: z.string().min(1).max(100).optional(),
     idPlantel: z.string().min(1).max(2).optional(),
     estado: z.enum(['Elaborado','Validado','Autorizado','Publicado','Cancelado']).optional(),
 });
