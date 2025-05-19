@@ -1,6 +1,6 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
 import { createAsignatura } from '../../../use-cases/asignatura';
-import { CreateAsignaturaSchema } from 'validators/asignatura';
+import { CreateAsignaturaSchema } from '@validators/asignatura';
 import { handleError } from '../../../utils/error.handler';
 
 export const createAsignaturaHandler = async (

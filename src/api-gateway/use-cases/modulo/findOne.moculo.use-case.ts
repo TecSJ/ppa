@@ -1,7 +1,7 @@
-import { findOneQuery } from 'models/queries';
-import { Modulo } from 'models/types/Modulos';
-import { Planes } from 'models/types/Planes';
-import { Programa } from 'models/types/Programas';
+import { findOneQuery } from '@models/queries';
+import { Modulo } from '@models/types/Modulos';
+import { Planes } from '@models/types/Planes';
+import { Programa } from '@models/types/Programas';
 
 type FindOneModuloData = {
   idModulo: number;

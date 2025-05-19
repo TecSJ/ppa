@@ -1,7 +1,7 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import { FindAllProgramaSchema } from 'validators/programa';
+import { FindAllProgramaSchema } from '@validators/programa';
 import { handleError } from '../../../utils/error.handler';
-import { findAllProgramas } from 'api-gateway/use-cases/programa/findAll.programa.use-case';
+import { findAllProgramas } from '@api-gateway/use-cases/programa/findAll.programa.use-case';
 
 export const findAllProgramasHandler = async (
     request: FastifyRequest,

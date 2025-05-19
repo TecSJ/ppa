@@ -1,5 +1,5 @@
-import { findOneQuery, createQuery } from "models/queries";
-import { Programa } from "models/types/Programas";
+import { findOneQuery, createQuery } from "@models/queries";
+import { Programa } from "@models/types/Programas";
 import { CreationAttributes } from "sequelize";
 
 type createProgramaData = CreationAttributes<Programa>

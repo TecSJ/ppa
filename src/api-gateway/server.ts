@@ -2,7 +2,7 @@ import Fastify from 'fastify';
 import AutoLoad from '@fastify/autoload';
 import path from 'path';
 import dotenv from 'dotenv';
-import sequelize from 'models/config/database';
+import sequelize from '@models/config/database';
 import cors from '@fastify/cors';
 
 dotenv.config();

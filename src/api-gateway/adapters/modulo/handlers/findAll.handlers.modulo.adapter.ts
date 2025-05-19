@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import { FindAllModuloSchema } from 'validators/modulo';
+import { FindAllModuloSchema } from '@validators/modulo';
 import { findAllModulos } from '../../../use-cases/modulo';
 import { handleError } from '../../../utils/error.handler';
 

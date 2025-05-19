@@ -1,6 +1,6 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
 import { createPlan } from '../../../use-cases/planes';
-import { CreatePlanSchema } from 'validators/planes';
+import { CreatePlanSchema } from '@validators/planes';
 import { handleError } from '../../../utils/error.handler';
 
 export const createPlanHandler = async (

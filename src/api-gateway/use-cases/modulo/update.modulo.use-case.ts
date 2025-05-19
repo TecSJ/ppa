@@ -1,5 +1,5 @@
-import { updateQuery} from 'models/queries';
-import { Modulo } from 'models/types/Modulos';
+import { updateQuery} from '@models/queries';
+import { Modulo } from '@models/types/Modulos';
 import { Optional } from 'sequelize';
 
 interface ModuloAttributes {

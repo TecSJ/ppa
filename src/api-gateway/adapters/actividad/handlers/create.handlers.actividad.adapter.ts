@@ -1,6 +1,6 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
 import { createActividad } from '../../../use-cases/actividad';
-import { CreateActividadSchema } from 'validators/actividad';
+import { CreateActividadSchema } from '@validators/actividad';
 import { handleError } from '../../../utils/error.handler';
 
 export const createActividadHandler = async (

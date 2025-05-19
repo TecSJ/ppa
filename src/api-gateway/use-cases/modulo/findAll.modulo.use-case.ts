@@ -1,7 +1,7 @@
-import { findAllQuery } from 'models/queries';
-import { Modulo } from 'models/types/Modulos';
-import { Planes } from 'models/types/Planes';
-import { Programa } from 'models/types/Programas';
+import { findAllQuery } from '@models/queries';
+import { Modulo } from '@models/types/Modulos';
+import { Planes } from '@models/types/Planes';
+import { Programa } from '@models/types/Programas';
 
 type FindAllModulosData = Partial<Modulo>;
 

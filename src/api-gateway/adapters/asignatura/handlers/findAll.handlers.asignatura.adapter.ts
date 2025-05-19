@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import { FindAllAsignaturaSchema } from 'validators/asignatura';
+import { FindAllAsignaturaSchema } from '@validators/asignatura';
 import { findAllAsignaturas } from '../../../use-cases/asignatura';
 import { handleError } from '../../../utils/error.handler';
 

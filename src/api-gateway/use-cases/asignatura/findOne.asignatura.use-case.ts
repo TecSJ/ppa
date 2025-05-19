@@ -17,8 +17,8 @@ type AsignaturaAttributes = {
   
   type FindOneAsignaturaData = Partial<AsignaturaAttributes>;
   
-  import { findOneQuery } from 'models/queries';
-  import { Asignatura } from 'models/types/Asignaturas';
+  import { findOneQuery } from '@models/queries';
+  import { Asignatura } from '@models/types/Asignaturas';
   
   const findOneAsignatura = async (where: FindOneAsignaturaData) => {
     return await findOneQuery(Asignatura)(where);

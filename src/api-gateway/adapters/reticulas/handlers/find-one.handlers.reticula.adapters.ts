@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import { FindOneReticulaSchema } from 'validators/reticulas'; 
+import { FindOneReticulaSchema } from '@validators/reticulas'; 
 import { findOneReticula } from '../../../use-cases/reticulas';
 import { handleError } from '../../../utils/error.handler';
 

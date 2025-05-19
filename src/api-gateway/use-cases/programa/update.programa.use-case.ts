@@ -1,5 +1,5 @@
-import { updateQuery } from "models/queries";
-import { Programa } from "models/types/Programas";
+import { updateQuery } from "@models/queries";
+import { Programa } from "@models/types/Programas";
 import { Optional } from "sequelize";
 
 interface ProgramaAttibutes{

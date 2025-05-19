@@ -14,8 +14,8 @@ type ProgramaAttributes = {
 
 type findOneProgramaData = Partial<ProgramaAttributes>;
 
-import { findOneQuery } from "models/queries";
-import { Programa } from "models/types/Programas";
+import { findOneQuery } from "@models/queries";
+import { Programa } from "@models/types/Programas";
 
 const findOnePrograma = async  (where: findOneProgramaData) => {
     return await findOneQuery(Programa)(where);

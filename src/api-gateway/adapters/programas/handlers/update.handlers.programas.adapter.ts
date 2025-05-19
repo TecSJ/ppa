@@ -1,6 +1,6 @@
-import { updatePrograma } from 'api-gateway/use-cases/programa/update.programa.use-case';
+import { updatePrograma } from '@api-gateway/use-cases/programa/update.programa.use-case';
 import { FastifyReply, FastifyRequest } from 'fastify';
-import { updateProgramaSchema, updateBodyProgramaSchema } from 'validators/programa';
+import { updateProgramaSchema, updateBodyProgramaSchema } from '@validators/programa';
 import { handleError } from '../../../utils/error.handler';
 
 export const updateProgramaHandler = async (

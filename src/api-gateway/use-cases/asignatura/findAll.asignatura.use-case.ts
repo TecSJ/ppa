@@ -1,5 +1,5 @@
-import { findAllQuery } from 'models/queries';
-import { Asignatura } from 'models/types/Asignaturas';
+import { findAllQuery } from '@models/queries';
+import { Asignatura } from '@models/types/Asignaturas';
 
 type FindAllAsignaturasData = Partial<Asignatura>;
 

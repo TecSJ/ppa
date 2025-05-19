@@ -14,6 +14,7 @@ const config: Config = {
   // Configurar alias según paths de tsconfig.json
   moduleNameMapper: {
     '^@models/(.*)$': '<rootDir>/src/models/$1',
+    '^@api-gateway/(.*)$': '<rootDir>/src/api-gateway/$1',
     '^@validators/(.*)$': '<rootDir>/src/validators/$1',
   },
 

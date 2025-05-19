@@ -1,6 +1,6 @@
-import { findOnePrograma } from 'api-gateway/use-cases/programa/findOne.programa.use-case';
+import { findOnePrograma } from '@api-gateway/use-cases/programa/findOne.programa.use-case';
 import { FastifyReply, FastifyRequest } from 'fastify';
-import { findOneProgramaSchema } from 'validators/programa';
+import { findOneProgramaSchema } from '@validators/programa';
 import { handleError } from '../../../utils/error.handler';
 
 export const findOneProgramaHandler = async (

@@ -1,5 +1,5 @@
-import { updateQuery} from 'models/queries';
-import { Planes } from 'models/types/Planes';
+import { updateQuery} from '@models/queries';
+import { Planes } from '@models/types/Planes';
 import { Optional } from 'sequelize';
 
 interface PlanesAttributes {

@@ -1,6 +1,6 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
 import { createCompetencia } from '../../../use-cases/competencia';
-import { CreateCompetenciaSchema } from 'validators/competencia';
+import { CreateCompetenciaSchema } from '@validators/competencia';
 import { handleError } from '../../../utils/error.handler';
 
 export const createCompetenciaHandler = async (

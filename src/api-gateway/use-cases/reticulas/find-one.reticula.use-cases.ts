@@ -1,7 +1,7 @@
-import { findOneQuery } from 'models/queries';
-import { Asignatura } from 'models/types/Asignaturas';
-import { Planes } from 'models/types/Planes';
-import { Reticulas } from 'models/types/Reticulas';
+import { findOneQuery } from '@models/queries';
+import { Asignatura } from '@models/types/Asignaturas';
+import { Planes } from '@models/types/Planes';
+import { Reticulas } from '@models/types/Reticulas';
   
 type ReticulaAttributes = {
     idReticula: number;

@@ -1,5 +1,5 @@
-import { findOneQuery, createQuery } from 'models/queries';
-import { Competencia } from 'models/types/Competencias';
+import { findOneQuery, createQuery } from '@models/queries';
+import { Competencia } from '@models/types/Competencias';
 import { CreationAttributes } from 'sequelize';
 
 

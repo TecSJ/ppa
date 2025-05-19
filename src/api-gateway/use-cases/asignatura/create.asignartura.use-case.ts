@@ -1,5 +1,5 @@
-import { findOneQuery, createQuery } from 'models/queries';
-import { Asignatura } from 'models/types/Asignaturas';
+import { findOneQuery, createQuery } from '@models/queries';
+import { Asignatura } from '@models/types/Asignaturas';
 import { CreationAttributes } from 'sequelize';
 
 type CreateAsignaturaData = CreationAttributes<Asignatura>;

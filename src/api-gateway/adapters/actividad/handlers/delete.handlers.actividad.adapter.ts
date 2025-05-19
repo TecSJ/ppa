@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import { DeleteActividadSchema } from 'validators/actividad';
+import { DeleteActividadSchema } from '@validators/actividad';
 import { deleteActividad } from '../../../use-cases/actividad';
 import { handleError } from '../../../utils/error.handler';
 
